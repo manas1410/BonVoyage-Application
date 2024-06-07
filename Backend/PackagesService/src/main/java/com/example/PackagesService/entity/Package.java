@@ -1,22 +1,23 @@
 package com.example.PackagesService.entity;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="packages")
-public class Packages {
+@Table(name="package")
+public class Package {
+
     @Id
     @Column(name="packageId")
     private String packageID;
@@ -59,4 +60,7 @@ public class Packages {
 
     @Column(name="packageImage")
     private String packageImage;
+
+    @OneToMany(cascade=CascadeType.ALL, orphanRemoval = true,mappedBy = "aPackage")
+    List<PackageItenary> packageItenaryList = new ArrayList<>();
 }
