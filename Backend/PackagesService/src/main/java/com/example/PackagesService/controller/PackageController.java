@@ -3,6 +3,8 @@ package com.example.PackagesService.controller;
 import com.example.PackagesService.payload.PackageDTO;
 import com.example.PackagesService.service.impl.PackageServiceImpl;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,7 +25,7 @@ public class PackageController {
         return packageService.getByPackageName(packageName);
     }
     @PostMapping()
-    public PackageDTO createPackage(@RequestBody PackageDTO packageDTO){
-        return packageService.createPackage(packageDTO);
+    public ResponseEntity<PackageDTO> createPackage(@RequestBody PackageDTO packageDTO){
+        return new ResponseEntity<>(packageService.createPackage(packageDTO), HttpStatus.CREATED);
     }
 }

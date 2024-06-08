@@ -45,3 +45,9 @@ QPackagesService/src/main/java/com/example/PackagesService/util/MapperLibrary.ja
 fservice-registry/src/main/java/com/app/serviceregistry/serviceregistry/ServiceRegistryApplication.java,0\f\0f9fca0eb5ef3bd58f8d0db00d1042552201b305
 ›
 kservice-registry/src/test/java/com/app/serviceregistry/serviceregistry/ServiceRegistryApplicationTests.java,b\0\b0656c4027f6f7b0e3fb65c6883eab1a34a3f33d
+€
+PUsersService/src/main/java/com/example/UsersService/UsersServiceApplication.java,3\e\3e243230191a7e2055f2c1f939e25775677c7e22
+’
+bPackagesService/src/main/java/com/example/PackagesService/controller/PackageItenaryController.java,0\1\019fb51ad8a8cfb600ff62160d1cb18a7260862d
+•
+ePackagesService/src/main/java/com/example/PackagesService/service/impl/PackageItenaryServiceImpl.java,e\a\eaa9e565198074579038913b44c0cc1c1d57814d
