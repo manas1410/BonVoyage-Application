@@ -34,4 +34,7 @@ public class PackageItenary {
     @Column(name="activities")
     private String activities;
 
+    @Column(name="itenaryImage")
+    private String itenaryImage;
+
 }
