@@ -10,7 +10,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PackageItenaryDTO {
-    private String packageID;
+    private Long itenaryId;
+    private Long packageID;
     private String day;
     private String title;
     private String activities;

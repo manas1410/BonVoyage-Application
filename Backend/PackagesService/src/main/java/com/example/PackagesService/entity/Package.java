@@ -1,6 +1,7 @@
 package com.example.PackagesService.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -63,5 +64,6 @@ public class Package {
     private String packageImage;
 
     @OneToMany(cascade=CascadeType.ALL, orphanRemoval = true,mappedBy = "aPackage")
+    @JsonIgnoreProperties("aPackage")
     List<PackageItenary> packageItenaryList = new ArrayList<>();
 }

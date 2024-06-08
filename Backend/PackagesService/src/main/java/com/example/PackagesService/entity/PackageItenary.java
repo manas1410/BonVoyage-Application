@@ -1,5 +1,7 @@
 package com.example.PackagesService.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,10 +17,12 @@ import lombok.Setter;
 public class PackageItenary {
     @Id
     @Column(name="itenaryId")
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long itenaryId;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="packageID", nullable = false)
+    @JsonIgnore
     private Package aPackage;
 
     @Column(name="day")
