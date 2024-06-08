@@ -20,6 +20,7 @@ public class Package {
 
     @Id
     @Column(name="packageId")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long packageID;
 
     @Column(name="packageCountry")
@@ -41,13 +42,13 @@ public class Package {
     private String packageReviews;
 
     @Column(name="packagePrice")
-    private String packagePrice;
+    private Long packagePrice;
 
     @Column(name="packageDuration")
     private  String packageDuration;
 
     @Column(name ="minAge")
-    private String minAge;
+    private Long minAge;
 
     @Column(name="maxPeople")
     private String maxPeople;
