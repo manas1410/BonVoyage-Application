@@ -15,4 +15,5 @@ public class PackageItenaryDTO {
     private String day;
     private String title;
     private String activities;
+    private String itenaryImage;
 }

@@ -51,3 +51,5 @@ PUsersService/src/main/java/com/example/UsersService/UsersServiceApplication.jav
 bPackagesService/src/main/java/com/example/PackagesService/controller/PackageItenaryController.java,0\1\019fb51ad8a8cfb600ff62160d1cb18a7260862d
 •
 ePackagesService/src/main/java/com/example/PackagesService/service/impl/PackageItenaryServiceImpl.java,e\a\eaa9e565198074579038913b44c0cc1c1d57814d
+f
+6UsersService/src/main/resources/application.properties,a\5\a5e6e0b38bfc0461daf896dc2188f52919333dae

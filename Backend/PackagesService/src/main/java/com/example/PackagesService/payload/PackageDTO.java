@@ -17,6 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PackageDTO {
+    private Long packageID;
     private String packageCountry;
     private String packageCity;
     private String packageName;

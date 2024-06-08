@@ -1,4 +1,10 @@
 
 ¦
-java:S1488 "cImmediately return this expression instead of assigning it to the temporary variable "packageDTOs".(ä†ƒÌ8ÛŸ±ºÿ1J$07eaa4a6-edad-4bb7-a72d-832f12af1650
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(È Øº8žƒ¯ºÿ1J$0684c912-e960-49ba-9461-389e704f46a8
+java:S1488 "cImmediately return this expression instead of assigning it to the temporary variable "packageDTOs".(ä†ƒÌ8ÛŸ±ºÿ1J$e55fe33c-63f0-42cc-b894-8be76e0866a9
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(È Øº8žƒ¯ºÿ1J$259e71e6-6f87-4ae0-8700-a4da87120b5e
+½
+java:S6204""zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(ª™¨¹8¤Ê‹Æÿ1J$7c5a4260-851c-49c9-8cca-3e3272ddfb51
+Ž
+java:S1612!"KReplace this lambda with method reference 'mapperLibrary::mapToPackageDTO'.(õäƒâ8¤Ê‹Æÿ1J$3355dbde-a77c-4cb9-bb1f-7471be32aa95
+‘
+java:S1128"NRemove this unused import 'com.example.PackagesService.entity.PackageItenary'.(ã‹œ­8¤Ê‹Æÿ1J$66c8403e-7b07-4430-9f76-4637d9e24ebc

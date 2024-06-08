@@ -1,11 +1,12 @@
-package entity;
-
+package com.app.UserService.entity;
+import com.app.UserService.payload.UserRole;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import payload.UserRole;
+
+
 
 @Getter
 @Setter
@@ -16,7 +17,8 @@ import payload.UserRole;
 public class Users {
     @Id
     @Column(name = "userId")
-    private String userId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long userId;
 
     @Column(name="userName")
     private String userName;
@@ -36,4 +38,5 @@ public class Users {
     @Enumerated(EnumType.STRING)
     @Column(name="userRole")
     private UserRole userRole;
+
 }
