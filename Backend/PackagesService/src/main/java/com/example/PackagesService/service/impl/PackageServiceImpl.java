@@ -10,6 +10,9 @@ import com.example.PackagesService.util.MapperLibrary;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @AllArgsConstructor
 @Service
 public class PackageServiceImpl implements PackageService {
@@ -24,10 +27,20 @@ public class PackageServiceImpl implements PackageService {
     }
 
     @Override
-    public PackageDTO getById(String packageID) {
+    public List<PackageDTO> getByPackageName(String name) {
+        List<Package> packages = pacakgeRepository.findByPackageCountry(name);
+        List<PackageDTO> packageDTOs = packages.stream()
+                .map(p -> mapperLibrary.mapToPackageDTO(p))
+                .collect(Collectors.toList());
+        return packageDTOs;
+    }
+
+    @Override
+    public PackageDTO getById(Long packageID) {
         Package aPackage = pacakgeRepository.findById(packageID).orElseThrow(
                 ()-> new ResourceNotFoundException("Package","id",packageID)
         );
         return mapperLibrary.mapToPackageDTO(aPackage);
     }
+
 }

@@ -20,7 +20,7 @@ public class Package {
 
     @Id
     @Column(name="packageId")
-    private String packageID;
+    private Long packageID;
 
     @Column(name="packageCountry")
     private String packageCountry;

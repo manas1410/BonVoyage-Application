@@ -43,3 +43,5 @@ QPackagesService/src/main/java/com/example/PackagesService/util/MapperLibrary.ja
 [PackagesService/src/main/java/com/example/PackagesService/controller/PackageController.java,9\5\953fccd1b0a43f42256e23c0d16f23c79d5ded17
 –
 fservice-registry/src/main/java/com/app/serviceregistry/serviceregistry/ServiceRegistryApplication.java,0\f\0f9fca0eb5ef3bd58f8d0db00d1042552201b305
+›
+kservice-registry/src/test/java/com/app/serviceregistry/serviceregistry/ServiceRegistryApplicationTests.java,b\0\b0656c4027f6f7b0e3fb65c6883eab1a34a3f33d
