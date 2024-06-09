@@ -53,3 +53,17 @@ bPackagesService/src/main/java/com/example/PackagesService/controller/PackageIte
 ePackagesService/src/main/java/com/example/PackagesService/service/impl/PackageItenaryServiceImpl.java,e\a\eaa9e565198074579038913b44c0cc1c1d57814d
 f
 6UsersService/src/main/resources/application.properties,a\5\a5e6e0b38bfc0461daf896dc2188f52919333dae
+w
+Gapi-gateway/src/main/java/com/app/apigateway/ApiGatewayApplication.java,4\5\45052799b5bdae95f5845c08f6e4ff67ab625b2f
+y
+IUserService/src/main/java/com/app/UserService/UserServiceApplication.java,1\f\1f7f55be5781ce76647eaed7572a8291b3633da7
+C
+api-gateway/pom.xml,2\b\2bfa2b108f2439e99e004f4085b58c22cf995f73
+}
+MUserService/src/main/java/com/app/UserService/controller/UsersController.java,5\0\508f092f23e782133d1d5e544618474a527ad9ce
+o
+?UserService/src/main/java/com/app/UserService/entity/Users.java,e\c\ec5994c934faf7e7075b3172430cf4f4c57fc6dd
+‰
+YBookingsService/src/main/java/com/example/BookingsService/BookingsServiceApplication.java,9\b\9b06b4a30203ffe1e1276308418c97bbfa5cc0e3
+†
+VUserService/src/main/java/com/app/UserService/exception/UserAlreadyExistException.java,8\5\85a9bdbe8eac0f75c2094d29e533d7977ca081c5

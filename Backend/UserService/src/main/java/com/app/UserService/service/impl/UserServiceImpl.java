@@ -1,6 +1,8 @@
 package com.app.UserService.service.impl;
 import com.app.UserService.entity.Users;
 import com.app.UserService.exception.ResourceNotFoundException;
+import com.app.UserService.exception.UserAlreadyExistException;
+import com.app.UserService.payload.ErrorResponseDto;
 import com.app.UserService.payload.UsersDTO;
 import com.app.UserService.repository.UserRepository;
 import com.app.UserService.service.UserService;
@@ -9,6 +11,8 @@ import lombok.AllArgsConstructor;
 import org.apache.catalina.User;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
+
 @Service
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {
@@ -17,8 +21,15 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UsersDTO createUser(UsersDTO usersDto) {
-        Users users = userRepository.save(mapperLibrary.mapToUsers(usersDto));
-         return mapperLibrary.mapToUsersDto(users);
+        System.out.println(usersDto);
+        try {
+            Users users = userRepository.save(mapperLibrary.mapToUsers(usersDto));
+            return mapperLibrary.mapToUsersDto(users);
+        }
+        catch (Exception e){
+            throw new UserAlreadyExistException();
+        }
+
     }
 
     @Override
@@ -50,6 +61,12 @@ public class UserServiceImpl implements UserService {
         getById(userId);
         userRepository.deleteById(userId);
         return "User deleted successfully";
+    }
+
+    @Override
+    public boolean authenticateUser(String email, String password) {
+        Users users= userRepository.findByUserEmail(email);
+        return users!=null&& users.getUserPassword().equals(password);
     }
 }
 
