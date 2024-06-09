@@ -67,3 +67,13 @@ o
 YBookingsService/src/main/java/com/example/BookingsService/BookingsServiceApplication.java,9\b\9b06b4a30203ffe1e1276308418c97bbfa5cc0e3
 †
 VUserService/src/main/java/com/app/UserService/exception/UserAlreadyExistException.java,8\5\85a9bdbe8eac0f75c2094d29e533d7977ca081c5
+C
+UserService/pom.xml,f\f\ffddcbafce9a6aa210161d0474661eebdc6c48b5
+s
+CUserService/src/main/java/com/app/UserService/payload/UsersDTO.java,4\b\4baf0b5f10db27babf9823be78144c20dfc3145a
+ƒ
+SUserService/src/main/java/com/app/UserService/exception/GlobalExceptionHandler.java,0\0\004b81653c7e81f62da2e0957131ef9bed8fa7d7
+{
+KUserService/src/main/java/com/app/UserService/payload/ErrorResponseDto.java,3\6\361cfc0f6d101af1e32a08da70012f6056bb84da
+†
+VUserService/src/main/java/com/app/UserService/exception/ResourceNotFoundException.java,b\8\b82ebe3e72ccd7b5fc0ffd9ed6e9250b3f46e612
