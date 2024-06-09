@@ -8,19 +8,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
-        <module name="BookingsService" />
+        <module name="Booking-Service" />
         <module name="PackagesService" />
         <module name="UserService" />
         <module name="service-registry" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="BookingsService" target="17" />
       <module name="config-server" target="17" />
       <module name="UsersService" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Booking-Service" options="-parameters" />
       <module name="BookingsService" options="-parameters" />
       <module name="PackagesService" options="-parameters" />
       <module name="UserService" options="-parameters" />

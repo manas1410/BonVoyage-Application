@@ -2,3 +2,5 @@
 š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸ýãåøÿÿÿÿJ$ffd06897-619c-4e2f-a8da-c1fb2aace067
 x
 java:S1128"=Remove this unused import 'com.app.UserService.entity.Users'.(Óñ“0J$de15c0f4-1c9d-4c52-a2d2-f0bf036d1254
+`
+java:S1128"CRemove this unused import 'org.springframework.http.RequestEntity'.(Ì…™Î8ÅØÇëÿ1
