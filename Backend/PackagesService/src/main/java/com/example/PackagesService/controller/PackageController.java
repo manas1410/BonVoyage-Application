@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("packages")
 @AllArgsConstructor
+@CrossOrigin(origins = "http://localhost:4200")
 public class PackageController {
 
     private final PackageServiceImpl packageService;
