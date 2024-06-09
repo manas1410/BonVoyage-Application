@@ -26,10 +26,10 @@ public class Booking {
     private Long packageID;
 
     @Column(name ="bookingDate")
-    private LocalDate bookingDate;
+    private String bookingDate;
 
     @Column(name = "travelDate")
-    private LocalDate travelDate;
+    private String travelDate;
 
     @Column(name= "noOfPersons")
     private Long noOfPersons;

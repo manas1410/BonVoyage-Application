@@ -7,10 +7,15 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { DestinationsComponent } from './destinations/destinations.component';
 import { PackagesComponent } from './packages/packages.component';
-import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ItenaryComponent } from './itenary/itenary.component';
-import { LoginComponent } from './login/login.component';
+// import { LoginComponent } from './login/login.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { UserComponent } from './user/user.component';
+import { RegisteruserComponent } from './registeruser/registeruser.component';
+import { BookingComponent } from './booking/booking.component';
 
 @NgModule({
   declarations: [
@@ -21,16 +26,19 @@ import { AboutUsComponent } from './about-us/about-us.component';
     PackagesComponent,
     ItenaryComponent,
     LoginComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    UserComponent,
+    RegisteruserComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
-    provideClientHydration(),
-    provideHttpClient()
+    provideClientHydration()
   ],
   bootstrap: [AppComponent]
 })

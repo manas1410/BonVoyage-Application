@@ -85,3 +85,11 @@ CUserService/src/main/java/com/app/UserService/payload/LoginDTO.java,6\3\6315dc
 OUserService/src/main/java/com/app/UserService/service/impl/UserServiceImpl.java,3\a\3a53c8b98404a80bffdced4da5f218933e5a63cc
 ã
 [BookingsService/src/main/java/com/example/BookingsService/controller/BookingController.java,3\4\348f7a349993b983fee72133ba0e91851f4c8bb5
+|
+LUserService/src/main/java/com/app/UserService/repository/UserRepository.java,c\5\c5f1c93a99c26480714bde72e66c731870286681
+v
+FUserService/src/main/java/com/app/UserService/service/UserService.java,c\6\c625bc82c8e9ca7c51c3259f32eb78adc74af64c
+}
+MBookingsService/src/main/java/com/example/BookingsService/entity/Booking.java,d\2\d2a01c8ab7bb836d9997c8e9c1caca038d085d4a
+Å
+QBookingsService/src/main/java/com/example/BookingsService/payload/BookingDTO.java,d\2\d2988ce181f4736e8ccfc03fd3be59b7c0160628

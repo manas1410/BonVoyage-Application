@@ -35,7 +35,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UsersDTO getById(Long userId) {
         Users users = userRepository.findById(userId).orElseThrow(
-                ()-> new ResourceNotFoundException("Users","id",userId)
+                ()-> new ResourceNotFoundException("Users","id",userId.toString())
         );
         return mapperLibrary.mapToUsersDto(users);
     }
@@ -62,11 +62,19 @@ public class UserServiceImpl implements UserService {
         userRepository.deleteById(userId);
         return "User deleted successfully";
     }
+    @Override
+    public UsersDTO getUserByEmail(String email){
+        Users users  = userRepository.findByUserEmail(email);
+        return mapperLibrary.mapToUsersDto(users);
+    }
 
     @Override
-    public boolean authenticateUser(String email, String password) {
+    public UsersDTO authenticateUser(String email, String password) {
+        System.out.println(email+" " + password);
         Users users= userRepository.findByUserEmail(email);
-        return users!=null&& users.getUserPassword().equals(password);
+        if (users!=null&& users.getUserPassword().equals(password))
+            return mapperLibrary.mapToUsersDto(users);
+        throw new ResourceNotFoundException("User","email",email);
     }
 }
 

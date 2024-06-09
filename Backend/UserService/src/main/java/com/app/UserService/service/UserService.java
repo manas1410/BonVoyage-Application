@@ -11,7 +11,8 @@ public interface UserService {
     List<UsersDTO> getAllUsers();
     UsersDTO updateUser(Long userId, UsersDTO usersDTO);
     String deleteUser(Long userId);
-    boolean authenticateUser(String email, String password);
+    UsersDTO authenticateUser(String email, String password);
+    UsersDTO getUserByEmail(String email);
 }
 
 

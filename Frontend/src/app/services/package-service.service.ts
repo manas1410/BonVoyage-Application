@@ -10,7 +10,7 @@ export class PackageServiceService {
   constructor(private http: HttpClient) { }
 
   getPackageData(name: string): Observable<any> {
-    return this.http.get(`http://localhost:9191/packages/package/${name}`);
+    return this.http.get(`http://localhost:8080/packages/package/${name}`);
   }
 
   
