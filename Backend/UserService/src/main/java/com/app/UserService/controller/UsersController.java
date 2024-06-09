@@ -1,11 +1,11 @@
 package com.app.UserService.controller;
-import com.app.UserService.entity.Users;
+
+    import com.app.UserService.payload.LoginDTO;
 import com.app.UserService.payload.UsersDTO;
 import com.app.UserService.service.impl.UserServiceImpl;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -44,9 +44,9 @@ public class UsersController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> loginUser(@RequestBody UsersDTO usersDTO){
+    public ResponseEntity<String> loginUser(@RequestBody LoginDTO loginDTO){
 
-        boolean isAuthenticated = userService.authenticateUser(usersDTO.getUserEmail(), usersDTO.getUserPassword());
+        boolean isAuthenticated = userService.authenticateUser(loginDTO.getUserEmail(), loginDTO.getUserPassword());
         if (isAuthenticated){
             return ResponseEntity.ok("Login Successful!!!");
         }
