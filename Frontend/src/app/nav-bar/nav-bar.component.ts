@@ -8,6 +8,7 @@ import { Component,HostListener } from '@angular/core';
 })
 export class NavBarComponent {
   isScrolled: boolean = false;
+  
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

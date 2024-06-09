@@ -14,12 +14,10 @@ public class BookingDTO {
     private long bookingID;
     @NotNull(message = "PackageId must not be empty.")
     private long packageID;
-    @NotNull(message = "Booking date must not be empty and must be in format (YYYY-MM-DD)")
-    @FutureOrPresent
-    private LocalDate bookingDate;
-    @NotNull(message = "Travel date must not be empty and must be in format (YYYY-MM-DD)")
-    @Future
-    private LocalDate travelDate;
+    @NotEmpty(message = "Booking date must not be empty and must be in format (YYYY-MM-DD)")
+    private String bookingDate;
+    @NotEmpty(message = "Travel date must not be empty and must be in format (YYYY-MM-DD)")
+    private String travelDate;
     @NotNull(message = "No. of Persons must not be empty and should greater than 0.")
     @Positive
     private Long noOfPersons;

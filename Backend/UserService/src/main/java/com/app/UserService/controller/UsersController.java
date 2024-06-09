@@ -1,6 +1,6 @@
 package com.app.UserService.controller;
 
-    import com.app.UserService.payload.LoginDTO;
+import com.app.UserService.payload.LoginDTO;
 import com.app.UserService.payload.UsersDTO;
 import com.app.UserService.service.impl.UserServiceImpl;
 import jakarta.validation.Valid;
@@ -43,18 +43,19 @@ public class UsersController {
         String message = userService.deleteUser(userId);
         return ResponseEntity.status(HttpStatus.OK).body(message);
     }
-
-    @PostMapping("/login")
-    public ResponseEntity<String> loginUser(@RequestBody LoginDTO loginDTO){
-
-        boolean isAuthenticated = userService.authenticateUser(loginDTO.getUserEmail(), loginDTO.getUserPassword());
-        if (isAuthenticated){
-            return ResponseEntity.ok("Login Successful!!!");
-        }
-        else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invallid email or password!!!");
-        }
+    @GetMapping("/email/{email}")
+    public UsersDTO getUserByUserEmail(@PathVariable String email){
+        return userService.getUserByEmail(email);
     }
+    @CrossOrigin(origins = "http://localhost:4200")
+    @PostMapping("/login")
+    public UsersDTO loginUser(@RequestBody LoginDTO loginDTO){
+
+        UsersDTO usersDTO = userService.authenticateUser(loginDTO.getEmail(), loginDTO.getPassword());
+        return usersDTO;
+    }
+
+
 
 }
 
