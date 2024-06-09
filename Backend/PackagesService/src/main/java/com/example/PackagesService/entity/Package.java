@@ -30,20 +30,20 @@ public class Package {
     @Column(name="packageCity")
     private String packageCity;
 
-    @Column(name="packageName")
+    @Column(name="packageName",unique = true)
     private String packageName;
 
     @Column(name="packageDesc")
     private String packageDesc;
 
     @Column(name="packageRating")
-    private String packageRating;
+    private Long packageRating;
 
     @Column(name="packageReviews")
-    private String packageReviews;
+    private Long packageReviews;
 
     @Column(name="packagePrice")
-    private Long packagePrice;
+    private double packagePrice;
 
     @Column(name="packageDuration")
     private  String packageDuration;

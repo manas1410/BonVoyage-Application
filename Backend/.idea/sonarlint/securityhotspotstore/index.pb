@@ -77,3 +77,9 @@ SUserService/src/main/java/com/app/UserService/exception/GlobalExceptionHandler.
 KUserService/src/main/java/com/app/UserService/payload/ErrorResponseDto.java,3\6\361cfc0f6d101af1e32a08da70012f6056bb84da
 †
 VUserService/src/main/java/com/app/UserService/exception/ResourceNotFoundException.java,b\8\b82ebe3e72ccd7b5fc0ffd9ed6e9250b3f46e612
+™
+iPackagesService/src/main/java/com/example/PackagesService/exception/PackageNameAlreadyExistException.java,2\c\2c70799471aa2b6b68314175da7633eb94e07a9c
+s
+CUserService/src/main/java/com/app/UserService/payload/LoginDTO.java,6\3\6315dc6ebf7e47ae9e90d8734c0713f35ceb05d5
+
+OUserService/src/main/java/com/app/UserService/service/impl/UserServiceImpl.java,3\a\3a53c8b98404a80bffdced4da5f218933e5a63cc

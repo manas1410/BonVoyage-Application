@@ -2,6 +2,7 @@ package com.example.PackagesService.service.impl;
 
 import com.example.PackagesService.entity.Package;
 import com.example.PackagesService.entity.PackageItenary;
+import com.example.PackagesService.exception.PackageNameAlreadyExistException;
 import com.example.PackagesService.exception.ResourceNotFoundException;
 import com.example.PackagesService.payload.PackageDTO;
 import com.example.PackagesService.repository.PacakgeRepository;
@@ -22,8 +23,13 @@ public class PackageServiceImpl implements PackageService {
 
     @Override
     public PackageDTO createPackage(PackageDTO packageDTO) {
-        Package aPackage = pacakgeRepository.save(mapperLibrary.mapToPackage(packageDTO));
-        return mapperLibrary.mapToPackageDTO(aPackage);
+        try{
+            Package aPackage = pacakgeRepository.save(mapperLibrary.mapToPackage(packageDTO));
+            return mapperLibrary.mapToPackageDTO(aPackage);
+        }
+        catch (Exception e){
+            throw new PackageNameAlreadyExistException();
+        }
     }
 
     @Override

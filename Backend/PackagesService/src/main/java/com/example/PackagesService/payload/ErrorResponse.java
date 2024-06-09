@@ -19,6 +19,9 @@ public class ErrorResponse {
         this.message = message;
         this.details = details;
     }
+    public ErrorResponse(){
+
+    }
 }
 
 

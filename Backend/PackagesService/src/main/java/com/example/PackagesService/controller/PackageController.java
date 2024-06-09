@@ -2,6 +2,7 @@ package com.example.PackagesService.controller;
 
 import com.example.PackagesService.payload.PackageDTO;
 import com.example.PackagesService.service.impl.PackageServiceImpl;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +27,7 @@ public class PackageController {
         return packageService.getByPackageName(packageName);
     }
     @PostMapping()
-    public ResponseEntity<PackageDTO> createPackage(@RequestBody PackageDTO packageDTO){
+    public ResponseEntity<PackageDTO> createPackage(@Valid @RequestBody PackageDTO packageDTO){
         return new ResponseEntity<>(packageService.createPackage(packageDTO), HttpStatus.CREATED);
     }
 }
